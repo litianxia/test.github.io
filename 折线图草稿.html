@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>line</title>
+    <!-- 引入 echarts.js -->
+    <script src="../echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 900px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '折线图堆叠'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['广州', '上海', '北京', '深圳']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['13', '14', '15', '16', ]
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                name: '广州',
+                type: 'line',
+                stack: '总量',
+                data: [427.2, 619.8, 615.4, 739.7]
+            }, {
+                name: '上海',
+                type: 'line',
+                stack: '总量',
+                data: [190.5, 241.1, 276.3, 370.0]
+            }, {
+                name: '北京',
+                type: 'line',
+                stack: '总量',
+                data: [453, 474, 514, 525]
+            }, {
+                name: '深圳',
+                type: 'line',
+                stack: '总量',
+                data: [340.63, 391, 412.8, 410.2]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
