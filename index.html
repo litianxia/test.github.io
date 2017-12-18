@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>你的城市爱读书吗？——中国主要城市图书馆数据分析</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <!-- 引入 ECharts 文件 -->
+    <script src="js/echarts.js "></script>
+    <script src="js/china.js"></script>
+    <script src="js/ecStat.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .wamp {
+            width: 1000px;
+            margin: 50px auto;
+            display: block;
+            background: #fff;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .box_w {
+            width: 1000px;
+            white-space: nowrap;
+            font-size: 0px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        
+        .box_w dl {
+            width: 250px;
+            white-space: nowrap;
+            font-size: 0px;
+            overflow: hidden;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .box_w dt {
+            width: 250px;
+            height: 250px;
+            display: inline-block;
+        }
+        
+        .box_w dd {
+            width: 744px;
+            height: 250px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .box_w dd img {
+            width: 100%;
+            height: 250px;
+            display: inline-block;
+        }
+        
+        .box_w a {
+            display: inline-block;
+        }
+    </style>
+
+
+
+</head>
+
+<body id="page-top">
+    <!-- Large modal -->
+
+
+
+    <!-- Small modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">回到顶端</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">全国</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#download">北上广深</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#download2">借阅榜</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#123">结语</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#321">其他</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <header class="masthead text-right text-white d-flex">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <h1 class="text-uppercase">
+                        <strong>你的城市爱读书吗？</strong>
+                    </h1>
+                </div>
+                <div class="col-lg-12 text-right mx-auto">
+                    <p class="text-faded  mb-5">——中国主要城市图书馆数据分析</p>
+                </div>
+                <div class="col-lg-6 mx-auto"><a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">了解更多</a></div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section id="about">
+        <div class=" container ">
+            <div class="row ">
+                <div class="col-lg-10 mx-auto ">
+                    <h2>
+                        <p style="color:black ">你知道吗？</h2>
+                    </p>
+                    <p class="lead " style="color:black ">人们常把一个城市的书店当作城市之光，从书店看一座城市的灵魂。然而，近两年城市书店图书销售量下降导致了闭店潮。随着实体书销售量的减少，我们都发出过这样的疑问：人们是不是越来越不爱看书了呢？随着电子设备的不断完善，人们更习惯在电子设备上进行碎片化阅读，图书是不是真的要慢慢退出人们的生活了呢？</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about " class="bg-primary ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-10 mx-auto ">
+
+                    <p class="lead " style="color:aliceblue ">然而，在广州市图书馆，每天平均约有
+                        <span style="font-size:300%">21561</span> 本图书被外借，约有<span style="font-size:300%">202657</span> 人被接待。在广州，100人中便有 <span style="font-size:300%">9</span>人拥有图书证。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+   <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+        <div class="row">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-10 text-center mx-auto ">
+
+                        <h2 class="lead "><span style="font-size:25px">我们上了全国多个城市的图书馆官网，</span></h2>
+
+                        <h3 class="lead "><span style="font-size:25px">找出了<strong>几千条数据</strong>，想看看人们以书为媒介的读书情况。</span></h3>
+
+                        <h4>&nbsp</h4>
+
+                        <h5>&nbsp</h4>
+                            <h4>&nbsp</h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/fullsize/sd1.jpg " alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>首都图书馆</h4>
+                    <p class="text-muted">Capital Library of China</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/fullsize/s1.jpg " alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>上海市图书馆</h4>
+                    <p class="text-muted">Shanghai Library</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/fullsize/sz1.jpg " alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>深圳市图书馆</h4>
+                    <p class="text-muted">Shenzhen Library</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/fullsize/g2.jpg " alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>广州市图书馆</h4>
+                    <p class="text-muted">Guangzhou Library</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/fullsize/hz1.jpg " alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>杭州市图书馆</h4>
+                    <p class="text-muted">Hangzhou Library</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/fullsize/gy1.jpg " alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>贵阳市图书馆</h4>
+                    <p class="text-muted">Guiyang Library</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+
+                <div class=" container my-auto ">
+                    <div class="row">
+                        <div class=" mx-auto">
+                            <div class="modal-body">
+
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">首都图书馆</h2>
+
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/sd3.jpg " alt="">
+                                <p class="item-intro text-muted">首都图书馆是北京市属大型公共图书馆， 坐落于东南三环华威桥东侧，全年365天开馆， 首都图书馆的历史可追溯至1913年, 由鲁迅先生亲自参与倡建的京师图书分馆、京师通俗图书馆和中央公园图书阅览三馆几经合并演变而成。
+                                </p>
+
+                                <ul class="list-inline">
+                                    <li>2016年接待公众访问525万人、外借文献235万册。</li>
+                                    <li>占地面积3.8万平方米，总建筑面积9.4万平方米，具有2万人次的日接待能力。</li>
+                                    <li>20个阅览室（区），近4000个阅览座席.</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                          <i class="fa fa-times"></i>
+                          Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">上海市图书馆</h2>
+
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/s2.jpg " alt="">
+                                <p class="item-intro text-muted">上海图书馆成立于1952年，上海科学技术情报研究所成立于1958年。上海图书馆上海科学技术情报研究所秉承“精致服务、至诚合作、引领学习、激扬智慧”的核心价值观，以“积淀文化，致力于卓越的知识服务”为使命，努力建设世界级城市图书馆。
+
+                                </p>
+                                <ul class="list-inline">
+                                    <li>2016年接待公众访问370万人、总注册读者410.7万人、外借文献6678万册。
+
+                                    </li>
+                                    <li>现有建筑面积总计12.7万平方米，拥有各类阅览室、学术活动室、报告厅、展览厅等空间。
+                                    </li>
+                                    <li>上海图书馆现藏中外文献5300余万册（件）。</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                          <i class="fa fa-times"></i>
+                          Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">深圳市图书馆</h2>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/sz4.jpg " alt="">
+                                <p class="item-intro text-muted">深圳图书馆新馆是深圳市政府投资兴建的大型现代文化设施，位于深圳市行政文化中心区内风景秀美的莲花山前。深圳图书馆坚持“服务立馆、技术强馆、文化新馆”的办馆理念，不断拓展服务领域，创新服务特色。
+
+                                </p>
+                                <ul class="list-inline">
+                                    <li>占 2016年接待公众访问410.2万人、总注册读者112.4万人、外借文献431.6万册。
+                                    </li>
+                                    <li>C 读者座席2000余个， 网络节点3000个， 日均接待读者13000人次。
+                                    </li>
+                                    <li>地29612平方米，总建筑面积49589平方米，纸质藏书近500万册。</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                          <i class="fa fa-times"></i>
+                          Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">广州市图书馆</h2>
+
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/g2.jpg " alt="">
+                                <p class="item-intro text-muted">广州图书馆新馆是广州市重点建设项目、文化惠民工程之一。总投资13.14亿元。2004年立项，2006年奠基，2012年12月28日起试开放，2013年6月23日起全面开放。</p>
+                                <ul class="list-inline">
+                                    <li>2016年接待公众访问739.7万人、总注册读者124万人、外借文献787万册、日均举办活动4.8场次。
+                                    </li>
+                                    <li>占地面积2.1万平方米， 总建筑面积9.8万平方米，是世界上规模最大的城市图书馆之一
+                                    </li>
+                                    <li>现馆藏文献790万册（件）， 阅览座位4000个，公用计算机702台，有线网络节点4000个，无线网络全覆盖
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                          <i class="fa fa-times"></i>
+                          Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">杭州市图书馆</h2>
+
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/hz2.jpg " alt="">
+                                <p class="item-intro text-muted">杭州图书馆成立于1958年，位于青年路见仁里；80年代中期，迁址浣纱路；1994年，全国图书馆评估定级中被评为一级图书馆、全国文明图书馆。2003年，国际国联成员馆。2008年10月，杭州市委市政府投入4亿元在城东钱塘江畔市民中心建成新馆；2010年，被国务院确定为第二批“全国古籍重点保护单位”</p>
+                                <ul class="list-inline">
+                                    <li> 拥有各类文献资源280万册（件），其中馆藏古籍、民国图书达4万余册，包括善本古籍634种，5058册；碑刻拓片1400余种</li>
+                                    <li>2016 年杭州图书馆读者到馆量 440.3 万人次，外借 102.3 万人次，外借文献 305.1 万册次</li>
+                                    <li>杭州图书馆全年向市民推送各类阅读推广与文化服务活动 1700 场，市民参与量为 284999 人次</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                          <i class="fa fa-times"></i>
+                          Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">贵阳市图书馆</h2>
+
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/fullsize/gy2.jpg " alt="">
+                                <p class="item-intro text-muted">贵阳市图书馆于1978年7月经市政府批准正式建馆，馆址在华家阁楼，现有馆舍坐落在风景秀美的南明河畔，建筑面积10421平方米，1996年12月26日向社会开放。</p>
+                                <ul class="list-inline">
+                                    <li>该馆现有藏书203万余册，其中纸质文献98万余册（件），年购书经费200万元，持证读者55172个。</li>
+                                    <li>2009年9月，我馆在西南地区首家开通24小时自助图书借阅室，实现了24小时×365天全天候服务。 2011年，国家数字图书馆推广工程启动，2013年实现与省图书馆虚拟网联通。
+                                    </li>
+                                    <li>2011年，在西南地区地市级图书馆中首家开通了移动图书馆服务，在图书馆馆范围内可免费利用Wi-Fi上网。 2012年9月，“贵阳移动图书馆”ISO和安卓客户端上线。
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                          <i class="fa fa-times"></i>
+                          Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <section class="bg-1 mx-auto  " id=" profit2">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-10 mx-auto  ">
+
+
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="main" style="width: 900px;height:400px;" class="col-lg-10 mx-auto text-center "></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('main'));
+
+                        // 指定图表的配置项和数据
+                        var geoCoordMap = {
+                            '上海': [121.48, 31.22],
+
+                            '厦门': [118.1, 24.46],
+
+                            '南宁': [108.33, 22.84],
+
+                            '广州': [113.23, 23.16],
+
+                            '深圳': [114.07, 22.62],
+
+                            '海口': [110.35, 20.02],
+
+                            '杭州': [120.19, 30.26],
+
+                            '南昌': [115.89, 28.68],
+
+                            '西安': [108.95, 34.27],
+
+                            '重庆': [106.54, 29.59],
+
+                            '贵阳': [106.71, 26.57],
+
+                            '兰州': [103.73, 36.03],
+
+                            '哈尔滨': [126.63, 45.75],
+
+                            '长沙': [113, 28.21]
+                        };
+
+                        var data = [{
+                            name: '上海',
+                            value: 170
+                        }, {
+                            name: '厦门',
+                            value: 65
+                        }, {
+                            name: '南宁',
+                            value: 34
+                        }, {
+                            name: '广州',
+                            value: 89
+                        }, {
+                            name: '昆明',
+                            value: 17
+                        }, {
+                            name: '深圳',
+                            value: 99
+                        }, {
+                            name: '海口',
+                            value: 49
+                        }, {
+                            name: '银川',
+                            value: 16
+                        }, {
+                            name: '西安',
+                            value: 34
+                        }, {
+                            name: '重庆',
+                            value: 9
+                        }, {
+                            name: '贵阳',
+                            value: 15
+                        }, {
+                            name: '杭州',
+                            value: 68
+                        }, {
+                            name: '兰州',
+                            value: 15
+                        }, {
+                            name: '哈尔滨',
+                            value: 24
+                        }, {
+                            name: '长沙',
+                            value: 33
+                        }];
+                        var convertData = function(data) {
+                            var res = [];
+                            for (var i = 0; i < data.length; i++) {
+                                var geoCoord = geoCoordMap[data[i].name];
+                                if (geoCoord) {
+                                    res.push({
+                                        name: data[i].name,
+                                        value: geoCoord.concat(data[i].value)
+                                    });
+                                }
+                            }
+                            return res;
+                        };
+
+                        var convertedData = [
+                            convertData(data),
+                            convertData(data.sort(function(a, b) {
+                                return b.value - a.value;
+                            }).slice(0, 6))
+                        ];
+
+
+                        option = {
+                            backgroundColor: '#0D85E7',
+                            animation: true,
+                            animationDuration: 1000,
+                            animationEasing: 'cubicInOut',
+                            animationDurationUpdate: 1000,
+                            animationEasingUpdate: 'cubicInOut',
+                            title: [{
+                                text: '全国部分城市图书馆人均阅读证持有数量分布图',
+                                subtext: 'data from 2016年各市图书馆年报',
+                                left: 'center',
+                                textStyle: {
+                                    color: '#FEFEFE'
+                                }
+                            }, {
+                                id: 'statistic',
+                                right: 120,
+                                top: 40,
+                                width: 100,
+                                textStyle: {
+                                    color: '#fff',
+                                    fontSize: 16
+                                }
+                            }],
+                            toolbox: {
+                                iconStyle: {
+                                    normal: {
+                                        borderColor: '#fff'
+                                    },
+                                    emphasis: {
+                                        borderColor: '#b1e4ff'
+                                    }
+                                }
+                            },
+                            brush: {
+                                outOfBrush: {
+                                    color: '#abc'
+                                },
+                                brushStyle: {
+                                    borderWidth: 2,
+                                    color: 'rgba(0,0,0,0.2)',
+                                    borderColor: 'rgba(0,0,0,0.5)',
+                                },
+                                seriesIndex: [0, 1],
+                                throttleType: 'debounce',
+                                throttleDelay: 300,
+                                geoIndex: 0
+                            },
+                            geo: {
+                                map: 'china',
+                                left: '10',
+                                right: '35%',
+                                center: [117.98561551896913, 31.205000490896193],
+                                zoom: 2.5,
+                                label: {
+                                    emphasis: {
+                                        show: false
+                                    }
+                                },
+                                roam: true,
+                                itemStyle: {
+                                    normal: {
+                                        areaColor: '#323c48',
+                                        borderColor: '#111'
+                                    },
+                                    emphasis: {
+                                        areaColor: '#2a333d'
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                trigger: 'item'
+                            },
+                            grid: {
+                                right: 40,
+                                top: 100,
+                                bottom: 40,
+                                width: '30%'
+                            },
+                            xAxis: {
+                                type: 'value',
+                                scale: true,
+                                position: 'top',
+                                boundaryGap: false,
+                                splitLine: {
+                                    show: false
+                                },
+                                axisLine: {
+                                    show: false
+                                },
+                                axisTick: {
+                                    show: false
+                                },
+                                axisLabel: {
+                                    margin: 2,
+                                    textStyle: {
+                                        color: '#aaa'
+                                    }
+                                },
+                            },
+                            yAxis: {
+                                type: 'category',
+                                name: '',
+                                nameGap: 16,
+                                axisLine: {
+                                    show: false,
+                                    lineStyle: {
+                                        color: '#ddd'
+                                    }
+                                },
+                                axisTick: {
+                                    show: false,
+                                    lineStyle: {
+                                        color: '#ddd'
+                                    }
+                                },
+                                axisLabel: {
+                                    interval: 0,
+                                    textStyle: {
+                                        color: '#ddd'
+                                    }
+                                },
+                                data: []
+                            },
+                            series: [{
+                                name: '',
+                                type: 'scatter',
+                                coordinateSystem: 'geo',
+                                data: convertedData[0],
+                                symbolSize: function(val) {
+                                    return Math.max(val[2] / 10, 8);
+                                },
+                                label: {
+                                    normal: {
+                                        formatter: '{b}',
+                                        position: 'right',
+                                        show: false
+                                    },
+                                    emphasis: {
+                                        show: true
+                                    }
+                                },
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ddb926'
+                                    }
+                                }
+                            }, {
+                                name: 'Top 6',
+                                type: 'effectScatter',
+                                coordinateSystem: 'geo',
+                                data: convertedData[1],
+                                symbolSize: function(val) {
+                                    return Math.max(val[2] / 10, 8);
+                                },
+                                showEffectOn: 'emphasis',
+                                rippleEffect: {
+                                    brushType: 'stroke'
+                                },
+                                hoverAnimation: true,
+                                label: {
+                                    normal: {
+                                        formatter: '{b}',
+                                        position: 'right',
+                                        show: true
+                                    }
+                                },
+                                itemStyle: {
+                                    normal: {
+                                        color: '#f4e925',
+                                        shadowBlur: 10,
+                                        shadowColor: '#333'
+                                    }
+                                },
+                                zlevel: 1
+                            }, {
+                                id: 'bar',
+                                zlevel: 2,
+                                type: 'bar',
+                                symbol: 'none',
+                                itemStyle: {
+                                    normal: {
+                                        color: '#ddb926'
+                                    }
+                                },
+                                data: []
+                            }]
+                        };
+
+
+                        myChart.on('brushselected', renderBrushed);
+
+                        // myChart.setOption(option);
+
+                        setTimeout(function() {
+                            myChart.dispatchAction({
+                                type: 'brush',
+                                areas: [{
+                                    geoIndex: 0,
+                                    brushType: 'polygon',
+                                    coordRange: [
+                                        [119.72, 34.85],
+                                        [119.68, 34.85],
+                                        [119.5, 34.84],
+                                        [119.19, 34.77],
+                                        [118.76, 34.63],
+                                        [118.6, 34.6],
+                                        [118.46, 34.6],
+                                        [118.33, 34.57],
+                                        [118.05, 34.56],
+                                        [117.6, 34.56],
+                                        [117.41, 34.56],
+                                        [117.25, 34.56],
+                                        [117.11, 34.56],
+                                        [117.02, 34.56],
+                                        [117, 34.56],
+                                        [116.94, 34.56],
+                                        [116.94, 34.55],
+                                        [116.9, 34.5],
+                                        [116.88, 34.44],
+                                        [116.88, 34.37],
+                                        [116.88, 34.33],
+                                        [116.88, 34.24],
+                                        [116.92, 34.15],
+                                        [116.98, 34.09],
+                                        [117.05, 34.06],
+                                        [117.19, 33.96],
+                                        [117.29, 33.9],
+                                        [117.43, 33.8],
+                                        [117.49, 33.75],
+                                        [117.54, 33.68],
+                                        [117.6, 33.65],
+                                        [117.62, 33.61],
+                                        [117.64, 33.59],
+                                        [117.68, 33.58],
+                                        [117.7, 33.52],
+                                        [117.74, 33.5],
+                                        [117.74, 33.46],
+                                        [117.8, 33.44],
+                                        [117.82, 33.41],
+                                        [117.86, 33.37],
+                                        [117.9, 33.3],
+                                        [117.9, 33.28],
+                                        [117.9, 33.27],
+                                        [118.09, 32.97],
+                                        [118.21, 32.7],
+                                        [118.29, 32.56],
+                                        [118.31, 32.5],
+                                        [118.35, 32.46],
+                                        [118.35, 32.42],
+                                        [118.35, 32.36],
+                                        [118.35, 32.34],
+                                        [118.37, 32.24],
+                                        [118.37, 32.14],
+                                        [118.37, 32.09],
+                                        [118.44, 32.05],
+                                        [118.46, 32.01],
+                                        [118.54, 31.98],
+                                        [118.6, 31.93],
+                                        [118.68, 31.86],
+                                        [118.72, 31.8],
+                                        [118.74, 31.78],
+                                        [118.76, 31.74],
+                                        [118.78, 31.7],
+                                        [118.82, 31.64],
+                                        [118.82, 31.62],
+                                        [118.86, 31.58],
+                                        [118.86, 31.55],
+                                        [118.88, 31.54],
+                                        [118.88, 31.52],
+                                        [118.9, 31.51],
+                                        [118.91, 31.48],
+                                        [118.93, 31.43],
+                                        [118.95, 31.4],
+                                        [118.97, 31.39],
+                                        [118.97, 31.37],
+                                        [118.97, 31.34],
+                                        [118.97, 31.27],
+                                        [118.97, 31.21],
+                                        [118.97, 31.17],
+                                        [118.97, 31.12],
+                                        [118.97, 31.02],
+                                        [118.97, 30.93],
+                                        [118.97, 30.87],
+                                        [118.97, 30.85],
+                                        [118.95, 30.8],
+                                        [118.95, 30.77],
+                                        [118.95, 30.76],
+                                        [118.93, 30.7],
+                                        [118.91, 30.63],
+                                        [118.91, 30.61],
+                                        [118.91, 30.6],
+                                        [118.9, 30.6],
+                                        [118.88, 30.54],
+                                        [118.88, 30.51],
+                                        [118.86, 30.51],
+                                        [118.86, 30.46],
+                                        [118.72, 30.18],
+                                        [118.68, 30.1],
+                                        [118.66, 30.07],
+                                        [118.62, 29.91],
+                                        [118.56, 29.73],
+                                        [118.52, 29.63],
+                                        [118.48, 29.51],
+                                        [118.44, 29.42],
+                                        [118.44, 29.32],
+                                        [118.43, 29.19],
+                                        [118.43, 29.14],
+                                        [118.43, 29.08],
+                                        [118.44, 29.05],
+                                        [118.46, 29.05],
+                                        [118.6, 28.95],
+                                        [118.64, 28.94],
+                                        [119.07, 28.51],
+                                        [119.25, 28.41],
+                                        [119.36, 28.28],
+                                        [119.46, 28.19],
+                                        [119.54, 28.13],
+                                        [119.66, 28.03],
+                                        [119.78, 28],
+                                        [119.87, 27.94],
+                                        [120.03, 27.86],
+                                        [120.17, 27.79],
+                                        [120.23, 27.76],
+                                        [120.3, 27.72],
+                                        [120.42, 27.66],
+                                        [120.52, 27.64],
+                                        [120.58, 27.63],
+                                        [120.64, 27.63],
+                                        [120.77, 27.63],
+                                        [120.89, 27.61],
+                                        [120.97, 27.6],
+                                        [121.07, 27.59],
+                                        [121.15, 27.59],
+                                        [121.28, 27.59],
+                                        [121.38, 27.61],
+                                        [121.56, 27.73],
+                                        [121.73, 27.89],
+                                        [122.03, 28.2],
+                                        [122.3, 28.5],
+                                        [122.46, 28.72],
+                                        [122.5, 28.77],
+                                        [122.54, 28.82],
+                                        [122.56, 28.82],
+                                        [122.58, 28.85],
+                                        [122.6, 28.86],
+                                        [122.61, 28.91],
+                                        [122.71, 29.02],
+                                        [122.73, 29.08],
+                                        [122.93, 29.44],
+                                        [122.99, 29.54],
+                                        [123.03, 29.66],
+                                        [123.05, 29.73],
+                                        [123.16, 29.92],
+                                        [123.24, 30.02],
+                                        [123.28, 30.13],
+                                        [123.32, 30.29],
+                                        [123.36, 30.36],
+                                        [123.36, 30.55],
+                                        [123.36, 30.74],
+                                        [123.36, 31.05],
+                                        [123.36, 31.14],
+                                        [123.36, 31.26],
+                                        [123.38, 31.42],
+                                        [123.46, 31.74],
+                                        [123.48, 31.83],
+                                        [123.48, 31.95],
+                                        [123.46, 32.09],
+                                        [123.34, 32.25],
+                                        [123.22, 32.39],
+                                        [123.12, 32.46],
+                                        [123.07, 32.48],
+                                        [123.05, 32.49],
+                                        [122.97, 32.53],
+                                        [122.91, 32.59],
+                                        [122.83, 32.81],
+                                        [122.77, 32.87],
+                                        [122.71, 32.9],
+                                        [122.56, 32.97],
+                                        [122.38, 33.05],
+                                        [122.3, 33.12],
+                                        [122.26, 33.15],
+                                        [122.22, 33.21],
+                                        [122.22, 33.3],
+                                        [122.22, 33.39],
+                                        [122.18, 33.44],
+                                        [122.07, 33.56],
+                                        [121.99, 33.69],
+                                        [121.89, 33.78],
+                                        [121.69, 34.02],
+                                        [121.66, 34.05],
+                                        [121.64, 34.08]
+                                    ]
+                                }]
+                            });
+                        }, 0);
+
+
+                        function renderBrushed(params) {
+                            var mainSeries = params.batch[0].selected[0];
+
+                            var selectedItems = [];
+                            var categoryData = [];
+                            var barData = [];
+                            var maxBar = 30;
+                            var sum = 0;
+                            var count = 0;
+
+                            for (var i = 0; i < mainSeries.dataIndex.length; i++) {
+                                var rawIndex = mainSeries.dataIndex[i];
+                                var dataItem = convertedData[0][rawIndex];
+                                var pmValue = dataItem.value[2];
+
+                                sum += pmValue;
+                                count++;
+
+                                selectedItems.push(dataItem);
+                            }
+
+                            selectedItems.sort(function(a, b) {
+                                return a.value[2] - b.value[2];
+                            });
+
+                            for (var i = 0; i < Math.min(selectedItems.length, maxBar); i++) {
+                                categoryData.push(selectedItems[i].name);
+                                barData.push(selectedItems[i].value[2]);
+                            }
+
+                            this.setOption({
+                                yAxis: {
+                                    data: categoryData
+                                },
+                                xAxis: {
+                                    axisLabel: {
+                                        show: !!count
+                                    }
+                                },
+                                title: {
+                                    id: 'statistic',
+                                    text: count ? '平均每千人持有量 ' + (sum / count).toFixed(4) : ''
+                                },
+                                series: {
+                                    id: 'bar',
+                                    data: barData
+                                }
+                            });
+                        }
+
+
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                    <p>&nbsp</p>
+
+                    <p class="text-white  ">人均阅读证持有， 表示当地持有图书证的人数占常住人口的比例。 从地图上能看出排名前三的分别为：上海（0.169732）、深圳（0.098781）、广州（0.088297）。上海的数据是最大的！说明了每100个住在上海的人就有17个人拥有图书馆的借阅证！上海人最爱读书！你的城市有多爱读书？
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section clearfix" id="">
+        <div class="container">
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/portfolio/fullsize/cs3.jpg" alt="">
+                <div class="intro-text left-0 text-center bg-faded img-wrapper p-5 rounded mx-auto" style="background-color:#fff ; opacity: 0.85">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper ">越有钱越爱看书？</span>
+
+                    </h2>
+                   
+                 <hr class="center">
+                   
+                    <p class="mb-3 " style="color:rgb(8, 8, 12)  ">马斯诺需求层次理论告诉我们人会最先满足自己的生理安全需求，才会追寻爱与尊重的精神需求。阅读也一样吗？是不是人们会先追求物质上的满足后再想着看书呢？像电影里一样，住在下水道里的流浪汉也爱看书呢？让数据告诉我们答案。</p>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="" id="  ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-10 mx-auto text-center ">
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="main2" style="width: 800px;height:400px;"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('main2'));
+
+                        // 指定图表的配置项和数据
+                        var data = [
+                            [54305, 169.7],
+                            [48695, 98.8, '深圳'],
+                            [50941, 88.3, '广州'],
+                            [46116, 67.7, '杭州'],
+                            [46254, 65.1, '厦门'],
+                            [26447, 49.4, '海口'],
+                            [22862, 34.3, '南宁'],
+                            [30032, 33.7, '陕西'],
+                            [43294, 32.6, '长沙'],
+                            [33190, 23.6, '哈尔滨'],
+                            [36739, 17.1, '昆明'],
+                            [30478, 16.0, '银川'],
+                            [29502, 15.1, '贵阳'],
+                            [22034, 9.4, '重庆'],
+                            [29661, 1.5, '兰州'],
+                        ];
+
+                        // See https://github.com/ecomfe/echarts-stat
+                        var myRegression = ecStat.regression('polynomial', data, 3);
+
+                        myRegression.points.sort(function(a, b) {
+                            return a[0] - b[0];
+                        });
+
+                        option = {
+
+                            tooltip: {
+                                trigger: 'axis',
+                                axisPointer: {
+                                    type: 'cross'
+                                }
+                            },
+                            title: {
+                                text: '城市收入与持有借阅证人数的关系',
+                                subtext: 'data from 各城市图书馆年报与年发展报告',
+                                sublink: 'https://github.com/ecomfe/echarts-stat',
+                                left: 'center',
+                                top: 16
+                            },
+                            xAxis: {
+                                type: 'value',
+                                name: '年平均收入',
+                                splitLine: {
+                                    lineStyle: {
+                                        type: 'dashed'
+                                    }
+                                },
+                                splitNumber: 2
+
+                            },
+                            yAxis: {
+                                type: 'value',
+                                name: '每千人人均持有借阅证',
+                                min: 0,
+                                splitLine: {
+                                    lineStyle: {
+                                        type: 'dashed'
+                                    }
+                                }
+                            },
+                            grid: {
+                                top: 90
+                            },
+                            series: [{
+                                name: 'lib',
+                                type: 'scatter',
+                                label: {
+                                    emphasis: {
+                                        show: true,
+                                        position: 'right',
+                                        textStyle: {
+                                            color: 'blue',
+                                            fontSize: 16
+                                        }
+                                    }
+                                },
+                                data: data
+                            }, {
+                                name: 'line',
+                                type: 'line',
+                                smooth: true,
+                                showSymbol: false,
+                                data: myRegression.points,
+                                markPoint: {
+                                    itemStyle: {
+                                        normal: {
+                                            color: 'transparent'
+                                        }
+                                    },
+                                    label: {
+                                        normal: {
+                                            show: false,
+                                            position: 'left',
+                                            formatter: myRegression.expression,
+                                            textStyle: {
+                                                color: '#5DBDE8',
+                                                fontSize: 14
+                                            }
+                                        }
+                                    },
+                                    data: [{
+                                        coord: myRegression.points[myRegression.points.length - 1]
+                                    }]
+                                }
+                            }]
+                        };
+
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                    <p class="text-black text-left mb-4 ">散点图是有一定的趋势和形状的，也就是说，一个城市的平均年收入与人均阅读证持有有一定的正相关关系。人均收入越多，人均阅读证持有越多。同时我们也发现，年均收入越高，人均阅读证持有的数据越稳定。年均收入在稍微后面的城市的人均阅读证持有会有明显的分化。有的城市年均收入不高，人均阅读证持有却很高，比如海口，南宁。 而有的城市呈现相反的状况，比如兰州、长沙。
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download-section content-section ">
+        <div class="container">
+            <div class="col-lg-8 mx-auto" style="background-color:#fff ;    opacity: 0.85">
+                <h2>人们真的不再读书了吗？</h2>
+                <p><span style=color:black>随着实体书销售量的减少，各种新闻公众号对于人们渐渐变的不爱读书的报道，以及“书本将从我们的生活中消失”这种观点的出现，让我们有了一种大家都不读书了的感觉。然而，去图书馆读书的人，并没有你想象中那样，
+                </span></p>
+     
+                <h2 class="text-center" ><span  style=color:black>逐年减少</span></h2>
+                <p>&nbsp</p>
+
+            </div>
+
+
+
+
+    </section>
+
+
+
+
+
+    <section class=" text-black ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-10 mx-auto  ">
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="main3" style="width:450px; height:400px; float:left; display:inline"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('main3'));
+
+                        // 指定图表的配置项和数据
+                        option = {
+                            title: {
+                                text: '图书馆接待访问量变化'
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data: ['广州', '上海', '北京', '深圳']
+                            },
+                            grid: {
+                                left: '3%',
+                                right: '4%',
+                                bottom: '3%',
+                                containLabel: true
+                            },
+                            toolbox: {
+                                feature: {
+                                    saveAsImage: {}
+                                }
+                            },
+                            xAxis: {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['2013', '2014', '2015', '2016', ]
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                name: '广州',
+                                type: 'line',
+                                stack: '总量',
+                                data: [427.2, 619.8, 615.4, 739.7]
+                            }, {
+                                name: '上海',
+                                type: 'line',
+                                stack: '总量',
+                                data: [190.5, 241.1, 276.3, 370.0]
+                            }, {
+                                name: '北京',
+                                type: 'line',
+                                stack: '总量',
+                                data: [453, 474, 514, 525]
+                            }, {
+                                name: '深圳',
+                                type: 'line',
+                                stack: '总量',
+                                data: [340.63, 391, 412.8, 410.2]
+                            }]
+                        };
+
+
+
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div class="box2" id="main4" style="width: 450px;height:400px;float:left; display:inline"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('main4'));
+
+                        // 指定图表的配置项和数据
+                        option = {
+                            title: {
+                                text: '图书馆外借文献量变化'
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data: ['广州', '上海', '北京', '深圳']
+                            },
+                            grid: {
+                                left: '3%',
+                                right: '4%',
+                                bottom: '3%',
+                                containLabel: true
+                            },
+                            toolbox: {
+                                feature: {
+                                    saveAsImage: {}
+                                }
+                            },
+                            xAxis: {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['2013', '2014', '2015', '2016', ]
+                            },
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                name: '广州',
+                                type: 'line',
+                                stack: '总量',
+                                data: [568.8, 732.7, 754, 787]
+                            }, {
+                                name: '上海',
+                                type: 'line',
+                                stack: '总量',
+                                data: [4625.6, 5354.1, 6219.4, 6678.8]
+                            }, {
+                                name: '北京',
+                                type: 'line',
+                                stack: '总量',
+                                data: [273.0, 280.2, 252.4, 235]
+                            }, {
+                                name: '深圳',
+                                type: 'line',
+                                stack: '总量',
+                                data: [361.4, 360, 383.9, 431.6]
+                            }]
+                        };
+
+
+
+
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+
+                    <p class="text-faded mb-4 ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+
+                    <p class="text-faded mb-4 " style="color:black">我们以北上广深的图书馆数据为例，折线图上的数据有图书馆年接待访问量人次，年外借文献量册数。我们可以清晰的看到，随着年份的推移，这些数据的趋势在曲折中上升。说明，随着年份的推移，去图书馆的人越来越多，人们从图书馆借走的书也越来越多。 </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="download2" class="download2-section content-section text-center ">
+        <div class="container ">
+            <div class="col-lg-8 mx-auto " style="opacity: 1 ">
+                <p class="btn btn-default btn-lg ">点击以下按钮猜猜他们最爱读什么书</p>
+
+            </div>
+
+    </section>
+
+
+    <section class="content-section " id=" 889">
+        <div class="container ">
+            <div class="content-section-heading mx-auto text-center ">
+                <h3 class="text-secondary mb-0 ">
+
+                    <select id="city ">
+                        <option value="上海 ">上海</option>
+                        <option value="广州 ">广州</option>
+                        <option value="深圳 ">深圳</option>
+                    </select>
+                    <select id="booktype ">
+                        <option value="工业技术 ">工业技术</option>
+                        <option value="航空、航天 ">航空、航天</option>
+                        <option value="环境科学、安全科学 ">环境科学、安全科学</option>
+                        <option value="交通运输 ">交通运输</option>
+                        <option value="经济 ">经济</option>
+                        <option value="军事 ">军事</option>
+                        <option value="历史、地理 ">历史、地理</option>
+                        <option value="马克思主义、列宁主义、毛泽东思想、邓小平理论 ">马克思主义、列宁主义、毛泽东思想、邓小平理论</option>
+                        <option value="农业科学 ">农业科学</option>
+                        <option value="社会科学总论 ">社会科学总论</option>
+                        <option value="生物科学 ">生物科学</option>
+                        <option value="数理科学和化学 ">数理科学和化学</option>
+                        <option value="天文 ">天文</option>
+                        <option value="文化、科学、教育、体育 ">文化、科学、教育、体育</option>
+                        <option value="文学 ">文学</option>
+                        <option value="医药、卫生 ">医药、卫生</option>
+                        <option value="艺术 ">艺术</option>
+                        <option value="语言、文字 ">语言、文字</option>
+                        <option value="哲学 ">哲学</option>
+                        <option value="政治、法律 ">政治、法律</option>
+                        <option value="自然科学总论 ">自然科学总论</option>
+                        <option value="综合性图书 ">综合性图书</option>
+                    </select>
+                    <!-- Button trigger modal -->
+                    <button type="button " class="btn btn-primary btn-lg " data-toggle="modal " data-target="#myModal " id="checkButton ">查询</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade " id="myModal " tabindex="-1 " role="dialog " aria-labelledby="myModalLabel ">
+                        <div class="modal-dialog " role="document ">
+                            <div class="modal-content ">
+                                <div class="modal-header ">
+                                    <button type="button " class="close " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">&times;</span></button>
+                                    <h4 class="modal-title " id="myModalLabel ">标题</h4>
+                                </div>
+                                <div class="modal-body " id="ModalBody ">
+                                    ...
+                                </div>
+                                <div class="modal-footer ">
+                                    <button type="button " class="btn btn-default " data-dismiss="modal ">Close</button>
+                                    <button type="button " class="btn btn-primary ">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </h3>
+                <h2 class="mb-5 ">
+                    <font style="vertical-align: inherit; ">
+                        <font style="vertical-align: inherit;size:16px "><span style="font-size:50% ">选择城市，书目类型，将为你展示该类型书目借阅数排名第一的书目。</span></font>
+                    </font>
+                </h2>
+            </div>
+            <div class="wamp ">
+                <div class="box_w ">
+                    <dl>
+                        <dt><a><img src="img/phb/bjq.jpg "/></a></dt>
+                        <dd>
+                            <a><img src="img/phb/bj.png " /></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a><img src="img/phb/shq.jpg "/></a></dt>
+                        <dd>
+                            <a><img src="img/phb/sh.png " /></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a><img src="img/phb/gzq.jpg "/></a></dt>
+                        <dd>
+                            <a><img src="img/phb/gz.png " /></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a><img src="img/phb/szq.jpg "/></a></dt>
+                        <dd>
+                            <a><img src="img/phb/sz.png " /></a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+    </section>
+
+
+
+    <section id="123">
+        <div data-v-0aec8b58="" class="likai-container" >
+            <div data-v-0aec8b58="" class="text-container" style="background-color:#fff ;    opacity: 0.85" >
+                <div data-v-0aec8b58="" class="title-container" >
+                <p>&nbsp</p>
+                    <p data-v-0aec8b58=""><span style=color:black>至2014年底，我国共有公共图书馆3117个</span></p>
+                    <p data-v-0aec8b58=""><span style=color:black>那些就在你身边的图书馆，那个我们容易遗忘却一直存在在我们记忆里的地方</span></p>
+                </div>
+                <div data-v-0aec8b58="" class="geci-container">
+                    <p data-v-0aec8b58="" style="margin-bottom: 20px;"><span style=color:black>那里有身穿校服来来往往的青春，有科研备考前来查阅自习的学者，有疲惫旅人过来休息小憩的沙发，有劳作一天还不忘来看看报纸的环卫工人，</span></p>
+                    <div data-v-0aec8b58="" class="geci-block">
+                        <p data-v-0aec8b58=""><span style=color:black>当然，还有你，有我</span></p>
+                        <p data-v-0aec8b58=""> <span style=color:black>从此刻开始，</span></p>
+                        <p data-v-0aec8b58=""><span style=color:black>放下手机、电脑，捧起一本书，</span></p>
+                        <p data-v-0aec8b58=""><span style=color:black>温一壶暖茶，感受身边生活的美好。</span></p>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-dark text-white " id="321">
+        <div class="container text-center ">
+            <div class="row ">
+                <div class="col-lg-10 mx-auto text-center ">
+
+                    <p class="text-faded mb-4 ">数据来源 作者团队：陈冠延 陈敏敏 李天霞 联系方式：15521142410 / 651712480@qq.com 指导老师：吴小坤
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js "></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="bootstrap/js/bootstrap.min.js "></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js "></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js "></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js "></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js "></script>
+
+</body>
+<script>
+    $("#checkButton ").on("click ", function() {
+                // $("#city ").val()
+                // $("#booktype ").val()
+                $("#myModalLabel ").html(" ");
+                if ($("#city ").val() == "深圳 " && $("#booktype ").val() == "工业技术 ") {
+                    $("#ModalBody ").html("<a href='https://www.szlib.org.cn/Search/searchdetail.jsp?v_tablearray=bibliosm,serbibm,apabibibm,mmbibm,&v_recno=2083733&v_curtable=bibliosm&site=null'>蛋糕的秘密:(美)乔安娜·柯尔文/(美)布鲁斯·迪根图 漆仰平译</a>");
+                } else if ($("#city").val() == "上海" && $("#booktype").val() == "工业技术") {
+                    $("#ModalBody").html(" <
+                            a href = 'www.sogou.com ' > sogou <
+                            /a>"); } })
+</script>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('.box_w dl').mouseover(function() {
+            var aa = $(this).index();
+            var aac = -aa * 250
+            $(this).parent('.box_w').stop().animate({
+                left: aac
+            }, 600)
+            $(this).stop().animate({
+                width: "1000px"
+            }, 600).siblings('dl').stop().animate({
+                width: "250px"
+            }, 600);
+        })
+        $('.box_w dl').mouseout(function() {
+            $(this).parent('.box_w').stop().animate({
+                left: "0px"
+            }, 600)
+            $(this).stop().animate({
+                width: "250px"
+            }, 600)
+        })
+    })
+</script>
+
+</html>
